@@ -8,7 +8,7 @@ const forecast = (longitude, latitude, callback) => {
         } else if (body.error) {            
             callback("Error: weather request", undefined);
         } else {            
-            callback(undefined, body.current.weather_descriptions[0] + '. It is currently ' + body.current.temperature + ', feels like ' + body.current.feelslike);
+            callback(undefined, body.current.weather_descriptions[0] + '. It is currently ' + body.current.temperature + ', feels like ' + body.current.feelslike + ", wind speed " + body.current.wind_speed);
         }
     });
 };
